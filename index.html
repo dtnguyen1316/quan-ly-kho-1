@@ -652,17 +652,14 @@
 
         // Firebase Config Setup (Tự động thích ứng hoặc sử dụng mặc định)
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'kho-hang-app';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' 
-            ? JSON.parse(__firebase_config) 
-            : {
-                // Nhập thông tin cấu hình Firebase của bạn ở đây nếu triển khai riêng
-                apiKey: "DEMO_KEY",
-                authDomain: "demo.firebaseapp.com",
-                projectId: "demo-app",
-                storageBucket: "demo.appspot.com",
-                messagingSenderId: "123456789",
-                appId: "1:123456789:web:demo"
-            };
+       const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "quan-ly-kho-1.firebaseapp.com",
+  projectId: "quan-ly-kho-1",
+  storageBucket: "quan-ly-kho-1.firebasestorage.app",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
         let app, db, auth;
         let currentUser = null;
